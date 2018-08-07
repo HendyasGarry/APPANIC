@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".RegisterAct">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrasi"
+            android:textSize="42dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/regTitle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/regTitle"
+            android:padding="32dp"
+            android:gravity="center_horizontal">
+
+            <!--input email-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:src="@android:drawable/ic_dialog_email"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:id="@+id/eMail"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
+
+            <!--email error-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter Email"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                android:id="@+id/nullEmail"
+                android:layout_marginLeft="32dp"/>
+
+            <!--email error-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This email has been used by other user"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                android:id="@+id/errorEmail"
+                android:layout_marginLeft="32dp"/>
+
+            <!--input password-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:src="@android:drawable/ic_lock_idle_lock"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:id="@+id/password"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <!--pass error-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Minimum password 8 character"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                android:id="@+id/errorPass"
+                android:layout_marginLeft="32dp"/>
+
+            <!--input lagi-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:src="@android:drawable/ic_lock_idle_lock"
+                    android:visibility="invisible"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="re-Enter Password"
+                    android:inputType="textPassword"
+                    android:id="@+id/reinput"/>
+            </LinearLayout>
+
+            <!--pass check error-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Must be same with your Password"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                android:id="@+id/errorCheck"
+                android:layout_marginLeft="32dp"/>
+
+            <!--no tlp-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:src="@android:drawable/ic_menu_call"
+                    android:layout_marginRight="10dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Family Number"
+                    android:inputType="number"
+                    android:id="@+id/pNumber"/>
+            </LinearLayout>
+
+            <!--numb error-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number must be 10-12 digits"
+                android:textColor="@color/colorAccent"
+                android:visibility="gone"
+                android:id="@+id/errorNumb"
+                android:layout_marginLeft="32dp"/>
+
+            <!--Register button-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="NEXT"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:id="@+id/btnNext"
+                android:onClick="register"
+                android:textSize="24sp"
+                android:layout_marginBottom="12dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

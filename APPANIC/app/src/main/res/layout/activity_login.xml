@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginAct"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:gravity="center">
+
+        <!--input email-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_dialog_email"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:id="@+id/mail"
+                android:inputType="textEmailAddress" />
+
+        </LinearLayout>
+
+        <!--input password-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:src="@android:drawable/ic_lock_idle_lock"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:id="@+id/pass"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <!--Login button-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="@color/colorPrimary"
+            android:onClick="login"
+            android:text="LOG IN"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textSize="24dp" />
+
+        <!--Register button-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Dont have an Account?  Register here!"
+            android:clickable="true"
+            android:onClick="create"
+            android:id="@+id/btnReg"/>
+
+    </LinearLayout>
+
+</ScrollView>
